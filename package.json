@@ -1,6 +1,6 @@
 {
   "name": "@robie2011/unixtime-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "convertes unixtime to humanreadable time",
   "main": "index.js",
   "repository": {
