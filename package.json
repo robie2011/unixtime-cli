@@ -8,7 +8,8 @@
     "url": "git+https://github.com/robie2011/unixtime-cli.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm publish --access public"
   },
   "bin": {
     "utime": "index.js"
