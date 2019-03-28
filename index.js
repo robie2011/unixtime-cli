@@ -43,7 +43,7 @@ function convert_unixtimestamp(str){
         d = new Date(stamp / 1e6)
         additionalNote = "ns: " + str.substr(-6)
     } else {
-        throw "invalid date: " + str
+        return "invalid date: " + str
     }
     return d.toISOString() + (additionalNote ? ` (${additionalNote})` : "")
 }
