@@ -1,0 +1,23 @@
+{
+  "name": "unixtime-cli",
+  "version": "1.0.0",
+  "description": "convertes unixtime to humanreadable time",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robie2011/unixtime-cli"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "utime": "index.js"
+  },
+  "keywords": [
+    "unixtime",
+    "cli"
+  ],
+  "author": "Robert Rajakoen",
+  "license": "ISC",
+  "dependencies": {}
+}
