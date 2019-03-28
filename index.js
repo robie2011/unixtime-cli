@@ -1,15 +1,6 @@
 #!/usr/bin/env node
 const { Transform } = require('stream');
 
-// class TimeTransformer extends stream.Transform {
-//     _transform(chunk, encoding, cb) {
-//         //console.log(chunk.toString())
-//         let result = convert(chunk.toString().trim())
-//         result.forEach(this.push)
-//         cb(null)
-//     }
-// }
-
 let transformer = new Transform({
     readableObjectMode: true,
     transform(chunk, encoding, callback) {
@@ -22,9 +13,6 @@ let transformer = new Transform({
 
     }
 })
-
-
-//transformer._transformState = {}
 
 function convert_unixtimestamp(str){
     const stamp = parseInt(str)
@@ -49,7 +37,6 @@ function convert_unixtimestamp(str){
 }
 
 function convert(str) {
-    //console.log("input: ", inputs)
     inputs = str.split("\n")
     return inputs.map(convert_unixtimestamp)
 }
@@ -61,9 +48,4 @@ if (process.argv.length > 2) {
     })
 } else {
     process.stdin.pipe(transformer).pipe(process.stdout)
-    // process.stdin.pipe(new stream.Transform({
-    //     transform(chunk, encoding, callback){
-    //         callback(null, chunk.toString().trim() + " bam")
-    //     }
-    // })).pipe(process.stdout)
 }
